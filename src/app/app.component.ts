@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RouterOutlet } from '@angular/router';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SidebarComponent, NavbarComponent, RouterOutlet],
+  imports: [NavbarComponent, SidebarComponent, RouterOutlet, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-admin-panel';
 }
